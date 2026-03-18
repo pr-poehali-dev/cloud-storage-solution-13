@@ -1,3 +1,96 @@
+const menuCategories = [
+  {
+    title: "ПЕЛЬМЕНИ",
+    emoji: "🥟",
+    items: [
+      { name: "Пельмени свинина-говядина", price: "700 ₽", desc: "500 г" },
+      { name: "Пельмени свинина-курица", price: "680 ₽", desc: "500 г" },
+      { name: "Пельмени цветные куриные", price: "680 ₽", desc: "500 г" },
+    ],
+  },
+  {
+    title: "МАНТЫ",
+    emoji: "🫕",
+    items: [
+      { name: "Манты свинина", price: "630 ₽", desc: "500 г" },
+      { name: "Манты курица-картофель", price: "600 ₽", desc: "500 г" },
+    ],
+  },
+  {
+    title: "ВАРЕНИКИ",
+    emoji: "🥙",
+    items: [
+      { name: "Вареники картофель-бекон-лук", price: "480 ₽", desc: "500 г" },
+      { name: "Вареники творог-сыр-зелень", price: "450 ₽", desc: "500 г" },
+      { name: "Вареники творог-вишня", price: "450 ₽", desc: "500 г" },
+      { name: "Вареники капуста-фарш", price: "440 ₽", desc: "500 г" },
+    ],
+  },
+  {
+    title: "БЛИНЫ",
+    emoji: "🫓",
+    items: [
+      { name: "Блины творог-вишня", price: "440 ₽", desc: "500 г" },
+      { name: "Блины творог-зелень-сыр", price: "400 ₽", desc: "500 г" },
+      { name: "Блины ветчина-сыр", price: "450 ₽", desc: "500 г" },
+      { name: "Блины грибы-сыр-курица-сливки", price: "500 ₽", desc: "500 г" },
+      { name: "Блины сладкие (сгущёнка, джем, шоколадная паста)", price: "380 ₽", desc: "500 г" },
+      { name: "Блины Рафаэлло (творог-кокос-сгущёнка)", price: "450 ₽", desc: "500 г" },
+    ],
+  },
+  {
+    title: "ХИНКАЛИ",
+    emoji: "🫙",
+    items: [
+      { name: "Хинкали свинина-говядина", price: "700 ₽", desc: "500 г" },
+      { name: "Хинкали курица-сыр", price: "680 ₽", desc: "500 г" },
+    ],
+  },
+  {
+    title: "КОТЛЕТЫ",
+    emoji: "🍖",
+    items: [
+      { name: "Котлеты свинина-говядина", price: "630 ₽", desc: "500 г" },
+      { name: "Котлеты куриные", price: "590 ₽", desc: "500 г" },
+      { name: "Котлеты куриные рубленые с цветной капустой и сыром", price: "550 ₽", desc: "500 г" },
+      { name: "Котлеты куриные рубленые с кукурузой и моцареллой", price: "600 ₽", desc: "500 г" },
+      { name: "Котлеты курица-индейка с брокколи", price: "650 ₽", desc: "500 г" },
+    ],
+  },
+  {
+    title: "КУРИНЫЕ ГНЁЗДА",
+    emoji: "🍗",
+    items: [
+      { name: "Гнёзда Том Ям (грибы-лук-сметана-моцарелла-соус том ям)", price: "180 ₽ / шт", desc: "200 г" },
+      { name: "Гнёзда Жульен (грибы-сыр-сливки-лук)", price: "180 ₽ / шт", desc: "200 г" },
+      { name: "Гнёзда с ананасом-сыром-помидором", price: "160 ₽ / шт", desc: "200 г" },
+      { name: "Гнёзда сулугуни-творог-зелень", price: "150 ₽ / шт", desc: "200 г" },
+    ],
+  },
+  {
+    title: "ДОЛМА И ГОЛУБЦЫ",
+    emoji: "🥬",
+    items: [
+      { name: "Долма свинина-говядина (готовая)", price: "750 ₽", desc: "500 г" },
+      { name: "Голубцы свинина-говядина", price: "650 ₽", desc: "500 г" },
+      { name: "Голубцы курица-булгур", price: "600 ₽", desc: "500 г" },
+    ],
+  },
+  {
+    title: "СЫРНИКИ",
+    emoji: "🧀",
+    items: [
+      { name: "Сырники мини ванильные", price: "550 ₽", desc: "500 г" },
+      { name: "Сырники с изюмом", price: "500 ₽", desc: "500 г" },
+      { name: "Сырники с маком и ягодным конфи", price: "580 ₽", desc: "500 г" },
+      { name: "Сырники с вишней", price: "550 ₽", desc: "500 г" },
+      { name: "Сырники с зеленью и сулугуни", price: "550 ₽", desc: "500 г" },
+      { name: "Сырники с варёной сгущёнкой", price: "550 ₽", desc: "500 г" },
+      { name: "Сырники с кокосом и сгущёнкой", price: "520 ₽", desc: "500 г" },
+    ],
+  },
+];
+
 export default function Index() {
   return (
     <>
@@ -6,7 +99,7 @@ export default function Index() {
       <header className="header">
         <div className="logo">ХОЛОДОК</div>
         <nav>
-          <a href="#">Каталог</a>
+          <a href="#menu">Меню</a>
           <a href="#">О нас</a>
           <a href="#">Доставка</a>
           <a href="#">Адреса</a>
@@ -26,9 +119,11 @@ export default function Index() {
               Магазин полуфабрикатов ХОЛОДОК — настоящая еда как у мамы, только быстрее. Пельмени, котлеты, вареники и многое другое — всегда свежие и готовые за 15 минут.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
-              <button className="btn-cta" style={{ background: "var(--primary)", color: "white" }}>
-                Смотреть каталог
-              </button>
+              <a href="#menu">
+                <button className="btn-cta" style={{ background: "var(--primary)", color: "white" }}>
+                  Смотреть меню
+                </button>
+              </a>
               <button className="btn-cta" style={{ background: "white" }}>
                 Наши адреса
               </button>
@@ -51,100 +146,77 @@ export default function Index() {
 
         <div className="marquee">
           <div className="marquee-content">
-            &nbsp; * ПЕЛЬМЕНИ РУЧНОЙ ЛЕПКИ * КОТЛЕТЫ КАК У БАБУШКИ * ТОЛЬКО СВЕЖИЕ ПРОДУКТЫ * БЕЗ КОНСЕРВАНТОВ * ДОСТАВКА ПО ГОРОДУ *
-            ПЕЛЬМЕНИ РУЧНОЙ ЛЕПКИ * КОТЛЕТЫ КАК У БАБУШКИ * ТОЛЬКО СВЕЖИЕ ПРОДУКТЫ * БЕЗ КОНСЕРВАНТОВ * ДОСТАВКА ПО ГОРОДУ
+            &nbsp; * ПЕЛЬМЕНИ РУЧНОЙ ЛЕПКИ * КОТЛЕТЫ КАК У БАБУШКИ * ТОЛЬКО СВЕЖИЕ ПРОДУКТЫ * БЕЗ КОНСЕРВАНТОВ * ХИНКАЛИ И МАНТЫ * СЫРНИКИ И БЛИНЫ *
+            ПЕЛЬМЕНИ РУЧНОЙ ЛЕПКИ * КОТЛЕТЫ КАК У БАБУШКИ * ТОЛЬКО СВЕЖИЕ ПРОДУКТЫ * БЕЗ КОНСЕРВАНТОВ * ХИНКАЛИ И МАНТЫ * СЫРНИКИ И БЛИНЫ
           </div>
         </div>
 
-        <section className="section-padding">
+        {/* ПОЛНОЕ МЕНЮ */}
+        <section id="menu" className="section-padding">
           <div className="section-header">
-            <h2 className="section-title">ХИТ СЕЗОНА</h2>
-            <a
-              href="#"
-              className="text-sm md:text-base"
-              style={{ color: "var(--dark)", fontWeight: 800, textTransform: "uppercase" }}
-            >
-              Весь каталог
-            </a>
+            <h2 className="section-title">ПОЛНОЕ МЕНЮ</h2>
           </div>
 
-          <div className="menu-grid">
-            {/* Item 1 */}
-            <div className="menu-card">
-              <span className="menu-tag">Хит продаж</span>
-              <img
-                src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Пельмени домашние"
-              />
-              <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Пельмени домашние</h3>
-                  <span className="price">320 ₽</span>
+          <div style={{ display: "flex", flexDirection: "column", gap: "60px" }}>
+            {menuCategories.map((cat) => (
+              <div key={cat.title}>
+                <div style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "12px",
+                  marginBottom: "24px",
+                  borderBottom: "3px solid var(--dark)",
+                  paddingBottom: "12px",
+                }}>
+                  <span style={{ fontSize: "28px" }}>{cat.emoji}</span>
+                  <h3 style={{
+                    fontFamily: "'Unbounded', sans-serif",
+                    fontWeight: 800,
+                    fontSize: "clamp(20px, 3vw, 28px)",
+                    textTransform: "uppercase",
+                    letterSpacing: "-0.5px",
+                  }}>{cat.title}</h3>
                 </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>
-                  500 г. Фарш из свинины и говядины, лук, специи. Тонкое тесто ручной лепки.
-                </p>
-              </div>
-            </div>
-
-            {/* Item 2 */}
-            <div className="menu-card">
-              <span className="menu-tag" style={{ background: "var(--secondary)" }}>
-                Новинка
-              </span>
-              <img
-                src="https://images.unsplash.com/photo-1529042410759-befb1204b468?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Котлеты по-домашнему"
-              />
-              <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Котлеты по-домашнему</h3>
-                  <span className="price">280 ₽</span>
+                <div style={{
+                  display: "grid",
+                  gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+                  gap: "2px",
+                }}>
+                  {cat.items.map((item) => (
+                    <div key={item.name} style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "flex-start",
+                      padding: "14px 16px",
+                      border: "2px solid var(--dark)",
+                      background: "white",
+                      gap: "12px",
+                      transition: "0.15s",
+                    }}
+                    onMouseEnter={e => (e.currentTarget.style.background = "var(--accent)")}
+                    onMouseLeave={e => (e.currentTarget.style.background = "white")}
+                    >
+                      <div>
+                        <div style={{ fontWeight: 700, fontSize: "14px", lineHeight: 1.3, marginBottom: "4px" }}>
+                          {item.name}
+                        </div>
+                        <div style={{ fontSize: "12px", color: "#888" }}>{item.desc}</div>
+                      </div>
+                      <div style={{
+                        fontFamily: "'Unbounded', sans-serif",
+                        fontWeight: 800,
+                        fontSize: "14px",
+                        color: "var(--primary)",
+                        whiteSpace: "nowrap",
+                        flexShrink: 0,
+                      }}>
+                        {item.price}
+                      </div>
+                    </div>
+                  ))}
                 </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>6 шт. Свинина + говядина, лук, яйцо. Без хлеба и заменителей.</p>
               </div>
-            </div>
-
-            {/* Item 3 */}
-            <div className="menu-card">
-              <span className="menu-tag" style={{ background: "var(--accent)", color: "var(--dark)" }}>
-                Популярное
-              </span>
-              <img
-                src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Вареники с картошкой"
-              />
-              <div className="menu-card-body">
-                <div
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "center",
-                    marginBottom: "10px",
-                  }}
-                >
-                  <h3>Вареники с картошкой</h3>
-                  <span className="price">240 ₽</span>
-                </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>
-                  500 г. Пюре из молодого картофеля с жареным луком. Любимый рецепт поколений.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </section>
 
@@ -204,26 +276,10 @@ export default function Index() {
         <div className="footer-links">
           <h4>Навигация</h4>
           <ul>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Каталог
-              </a>
-            </li>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                О нас
-              </a>
-            </li>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Доставка
-              </a>
-            </li>
-            <li>
-              <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Политика
-              </a>
-            </li>
+            <li><a href="#menu" style={{ color: "inherit", textDecoration: "none" }}>Меню</a></li>
+            <li><a href="#" style={{ color: "inherit", textDecoration: "none" }}>О нас</a></li>
+            <li><a href="#" style={{ color: "inherit", textDecoration: "none" }}>Доставка</a></li>
+            <li><a href="#" style={{ color: "inherit", textDecoration: "none" }}>Политика</a></li>
           </ul>
         </div>
         <div className="footer-links">
