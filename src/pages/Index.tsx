@@ -104,7 +104,9 @@ export default function Index() {
           <a href="#">Доставка</a>
           <a href="#">Адреса</a>
         </nav>
-        <button className="btn-cta">Заказать</button>
+        <a href="tel:+79232809259">
+          <button className="btn-cta">Позвонить</button>
+        </a>
       </header>
 
       <main>
