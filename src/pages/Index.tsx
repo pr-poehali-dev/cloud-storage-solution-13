@@ -234,8 +234,8 @@ export default function Index() {
           </div>
           <div className="vibe-img" style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "40px 30px", gap: "24px", background: "var(--bg)" }}>
             {[
-              { icon: "🥩", title: "Только свежее мясо", desc: "Никаких заморозок и заменителей — берём у проверенных поставщиков" },
-              { icon: "🙌", title: "Ручная лепка", desc: "Каждая позиция делается вручную, как у бабушки на кухне" },
+              { icon: "🥩", title: "Только свежее мясо", desc: "Никаких заморозок и заменителей" },
+              { icon: "🙌", title: "Ручная лепка", desc: "Каждая позиция делается вручную" },
               { icon: "🚫", title: "Без консервантов", desc: "Никаких E-добавок, усилителей вкуса и химии" },
               { icon: "⚡", title: "Быстро и вкусно", desc: "Удобно и быстро в любой день" },
             ].map((item) => (
