@@ -236,9 +236,11 @@ export default function Index() {
         </section>
 
         <section className="section-padding">
-          <h2 className="section-title" style={{ marginBottom: "40px", textAlign: "center" }}>
-            @HOLODOK.SHOP
-          </h2>
+          <a href="https://vk.com/club236680400" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit" }}>
+            <h2 className="section-title" style={{ marginBottom: "40px", textAlign: "center" }}>
+              ВКонтакте
+            </h2>
+          </a>
           <div className="social-grid">
             <div className="social-item">
               <img
