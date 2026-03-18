@@ -290,10 +290,15 @@ export default function Index() {
           </ul>
         </div>
         <div className="footer-links">
-          <h4>Адрес</h4>
+          <h4>Адрес и контакты</h4>
           <ul>
             <li>г. Боготол</li>
             <li>ул. Кирова, 8а</li>
+            <li style={{ marginTop: "8px" }}>
+              <a href="tel:+79232809259" style={{ color: "inherit", textDecoration: "none" }}>
+                +7 923 280-92-59
+              </a>
+            </li>
           </ul>
         </div>
       </footer>
