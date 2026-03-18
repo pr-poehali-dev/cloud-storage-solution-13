@@ -290,18 +290,10 @@ export default function Index() {
           </ul>
         </div>
         <div className="footer-links">
-          <h4>Контакты</h4>
+          <h4>Адрес</h4>
           <ul>
-            <li>
-              <a href="tel:+78001234567" style={{ color: "inherit", textDecoration: "none" }}>
-                8-800-123-45-67
-              </a>
-            </li>
-            <li>
-              <a href="mailto:info@holodok.ru" style={{ color: "inherit", textDecoration: "none" }}>
-                info@holodok.ru
-              </a>
-            </li>
+            <li>г. Боготол</li>
+            <li>ул. Кирова, 8а</li>
           </ul>
         </div>
       </footer>
