@@ -232,7 +232,34 @@ export default function Index() {
               О магазине
             </button>
           </div>
-          <div className="vibe-img"></div>
+          <div className="vibe-img" style={{ display: "flex", flexDirection: "column", justifyContent: "center", padding: "40px 30px", gap: "24px", background: "var(--bg)" }}>
+            {[
+              { icon: "🥩", title: "Только свежее мясо", desc: "Никаких заморозок и заменителей — берём у проверенных поставщиков" },
+              { icon: "🙌", title: "Ручная лепка", desc: "Каждая позиция делается вручную, как у бабушки на кухне" },
+              { icon: "🚫", title: "Без консервантов", desc: "Никаких E-добавок, усилителей вкуса и химии" },
+              { icon: "⚡", title: "Готово за 15 минут", desc: "Полноценный ужин без лишних усилий в любой день" },
+            ].map((item) => (
+              <div key={item.title} style={{ display: "flex", gap: "16px", alignItems: "flex-start" }}>
+                <div style={{
+                  fontSize: "28px",
+                  width: "48px",
+                  height: "48px",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  background: "var(--accent)",
+                  border: "2px solid var(--dark)",
+                  flexShrink: 0,
+                }}>
+                  {item.icon}
+                </div>
+                <div>
+                  <div style={{ fontWeight: 800, fontSize: "15px", marginBottom: "4px", textTransform: "uppercase" }}>{item.title}</div>
+                  <div style={{ fontSize: "13px", color: "#666", lineHeight: 1.5 }}>{item.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
 
