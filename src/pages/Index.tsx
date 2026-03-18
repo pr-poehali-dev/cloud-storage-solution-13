@@ -4,33 +4,33 @@ export default function Index() {
       <div className="grain-overlay" />
 
       <header className="header">
-        <div className="logo">VINYL*DINER</div>
+        <div className="logo">ХОЛОДОК</div>
         <nav>
-          <a href="#">Меню</a>
+          <a href="#">Каталог</a>
           <a href="#">О нас</a>
-          <a href="#">Афиша</a>
+          <a href="#">Доставка</a>
           <a href="#">Адреса</a>
         </nav>
-        <button className="btn-cta">Забронировать</button>
+        <button className="btn-cta">Заказать</button>
       </header>
 
       <main>
         <section className="hero">
           <div className="hero-content">
             <h1 className="hero-title">
-              БЕЗ ПОНТОВ,
+              ДОМАШНИЙ
               <br />
-              ТОЛЬКО <span>ВКУС</span>
+              ВКУС <span>без лишних трат</span>
             </h1>
             <p className="text-base md:text-lg lg:text-xl mb-8 md:mb-10 leading-relaxed text-[#555]">
-              Эстетика 70-х в современной подаче. Локальные продукты, огненные блюда и атмосфера для настоящих ценителей.
+              Магазин полуфабрикатов ХОЛОДОК — настоящая еда как у мамы, только быстрее. Пельмени, котлеты, вареники и многое другое — всегда свежие и готовые за 15 минут.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
               <button className="btn-cta" style={{ background: "var(--primary)", color: "white" }}>
-                Заказать
+                Смотреть каталог
               </button>
               <button className="btn-cta" style={{ background: "white" }}>
-                Смотреть меню
+                Наши адреса
               </button>
             </div>
           </div>
@@ -41,30 +41,30 @@ export default function Index() {
               КАЖДЫЙ ДЕНЬ
             </div>
             <div className="floating-tag hidden md:block" style={{ top: "20%", left: "10%" }}>
-              #ЭСТЕТИКА
+              #ВКУСНО
             </div>
             <div className="floating-tag hidden md:block" style={{ bottom: "30%", right: "20%" }}>
-              ОГОНЬ
+              БЕЗ ХИМИИ
             </div>
           </div>
         </section>
 
         <div className="marquee">
           <div className="marquee-content">
-            &nbsp; * БУРГЕРЫ КОТОРЫЕ РВУТ * КРАФТОВЫЕ КОКТЕЙЛИ * ТОЛЬКО РЕТРО ВАЙБ * ОТКРЫТЫ ДО 2:00 * ЛУЧШИЕ В ГОРОДЕ *
-            БУРГЕРЫ КОТОРЫЕ РВУТ * КРАФТОВЫЕ КОКТЕЙЛИ * ТОЛЬКО РЕТРО ВАЙБ * ОТКРЫТЫ ДО 2:00 * ЛУЧШИЕ В ГОРОДЕ
+            &nbsp; * ПЕЛЬМЕНИ РУЧНОЙ ЛЕПКИ * КОТЛЕТЫ КАК У БАБУШКИ * ТОЛЬКО СВЕЖИЕ ПРОДУКТЫ * БЕЗ КОНСЕРВАНТОВ * ДОСТАВКА ПО ГОРОДУ *
+            ПЕЛЬМЕНИ РУЧНОЙ ЛЕПКИ * КОТЛЕТЫ КАК У БАБУШКИ * ТОЛЬКО СВЕЖИЕ ПРОДУКТЫ * БЕЗ КОНСЕРВАНТОВ * ДОСТАВКА ПО ГОРОДУ
           </div>
         </div>
 
         <section className="section-padding">
           <div className="section-header">
-            <h2 className="section-title">ВЫБОР ШЕФА</h2>
+            <h2 className="section-title">ХИТ СЕЗОНА</h2>
             <a
               href="#"
               className="text-sm md:text-base"
               style={{ color: "var(--dark)", fontWeight: 800, textTransform: "uppercase" }}
             >
-              Всё меню
+              Весь каталог
             </a>
           </div>
 
@@ -73,8 +73,8 @@ export default function Index() {
             <div className="menu-card">
               <span className="menu-tag">Хит продаж</span>
               <img
-                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Классический бургер"
+                src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Пельмени домашние"
               />
               <div className="menu-card-body">
                 <div
@@ -85,11 +85,11 @@ export default function Index() {
                     marginBottom: "10px",
                   }}
                 >
-                  <h3>Классика</h3>
-                  <span className="price">1 400 ₽</span>
+                  <h3>Пельмени домашние</h3>
+                  <span className="price">320 ₽</span>
                 </div>
                 <p style={{ fontSize: "14px", color: "#666" }}>
-                  Тройной смэш из мраморной говядины, фирменный соус, маринованные огурцы на бриоши.
+                  500 г. Фарш из свинины и говядины, лук, специи. Тонкое тесто ручной лепки.
                 </p>
               </div>
             </div>
@@ -97,11 +97,11 @@ export default function Index() {
             {/* Item 2 */}
             <div className="menu-card">
               <span className="menu-tag" style={{ background: "var(--secondary)" }}>
-                Острое
+                Новинка
               </span>
               <img
-                src="https://images.unsplash.com/photo-1513104890138-7c749659a591?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Неоновая пицца"
+                src="https://images.unsplash.com/photo-1529042410759-befb1204b468?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Котлеты по-домашнему"
               />
               <div className="menu-card-body">
                 <div
@@ -112,10 +112,10 @@ export default function Index() {
                     marginBottom: "10px",
                   }}
                 >
-                  <h3>Электро Пепперони</h3>
-                  <span className="price">1 800 ₽</span>
+                  <h3>Котлеты по-домашнему</h3>
+                  <span className="price">280 ₽</span>
                 </div>
-                <p style={{ fontSize: "14px", color: "#666" }}>Двойная пепперони, острый мёд, тесто на закваске.</p>
+                <p style={{ fontSize: "14px", color: "#666" }}>6 шт. Свинина + говядина, лук, яйцо. Без хлеба и заменителей.</p>
               </div>
             </div>
 
@@ -125,8 +125,8 @@ export default function Index() {
                 Популярное
               </span>
               <img
-                src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
-                alt="Диско Сауэр"
+                src="https://images.unsplash.com/photo-1574484284002-952d92456975?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                alt="Вареники с картошкой"
               />
               <div className="menu-card-body">
                 <div
@@ -137,11 +137,11 @@ export default function Index() {
                     marginBottom: "10px",
                   }}
                 >
-                  <h3>Диско Сауэр</h3>
-                  <span className="price">1 200 ₽</span>
+                  <h3>Вареники с картошкой</h3>
+                  <span className="price">240 ₽</span>
                 </div>
                 <p style={{ fontSize: "14px", color: "#666" }}>
-                  Джин, цветок бузины, голубой чай и съедобная золотая пыльца.
+                  500 г. Пюре из молодого картофеля с жареным луком. Любимый рецепт поколений.
                 </p>
               </div>
             </div>
@@ -150,13 +150,12 @@ export default function Index() {
 
         <section className="retro-vibe">
           <div>
-            <h2 className="vibe-title">ВАЙБ-ЧЕК ПРОЙДЕН.</h2>
+            <h2 className="vibe-title">НАСТОЯЩАЯ ЕДА — ЭТО ПРОСТО.</h2>
             <p className="vibe-text">
-              Мы не просто кормим. Мы создаём моменты. От плейлиста хип-хопа 90-х до диванов в стиле 70-х — каждый уголок
-              продуман для твоего идеального кадра. Бронь не нужна, просто приходи с настроением.
+              В ХОЛОДКЕ нет E-добавок и усилителей. Только мясо, тесто, овощи и немного любви. Мы готовим так, как готовили раньше — руками, с уважением к продукту. Заходи, выбирай, готовь дома как профи.
             </p>
             <button className="btn-cta" style={{ background: "var(--dark)", color: "white", borderColor: "white" }}>
-              Наша история
+              О магазине
             </button>
           </div>
           <div className="vibe-img"></div>
@@ -164,31 +163,31 @@ export default function Index() {
 
         <section className="section-padding">
           <h2 className="section-title" style={{ marginBottom: "40px", textAlign: "center" }}>
-            @VINYL.DINER
+            @HOLODOK.SHOP
           </h2>
           <div className="social-grid">
             <div className="social-item">
               <img
-                src="https://images.unsplash.com/photo-1467003909585-2f8a72700288?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 1"
+                src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Фото 1"
               />
             </div>
             <div className="social-item">
               <img
-                src="https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 2"
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Фото 2"
               />
             </div>
             <div className="social-item">
               <img
-                src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 3"
+                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Фото 3"
               />
             </div>
             <div className="social-item">
               <img
-                src="https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
-                alt="Инста 4"
+                src="https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80"
+                alt="Фото 4"
               />
             </div>
           </div>
@@ -197,9 +196,9 @@ export default function Index() {
 
       <footer>
         <div>
-          <div className="footer-logo">VINYL*DINER</div>
+          <div className="footer-logo">ХОЛОДОК</div>
           <p style={{ color: "#666", lineHeight: 1.6 }}>
-            Твоё место для еды высокого качества и лоу-фай атмосферы. С 2024, но ощущается как 1974.
+            Магазин полуфабрикатов. Настоящая еда без лишних хлопот — как дома, только быстрее.
           </p>
         </div>
         <div className="footer-links">
@@ -207,7 +206,7 @@ export default function Index() {
           <ul>
             <li>
               <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Меню
+                Каталог
               </a>
             </li>
             <li>
@@ -217,12 +216,12 @@ export default function Index() {
             </li>
             <li>
               <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Политика
+                Доставка
               </a>
             </li>
             <li>
               <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-                Условия
+                Политика
               </a>
             </li>
           </ul>
@@ -230,16 +229,24 @@ export default function Index() {
         <div className="footer-links">
           <h4>Часы работы</h4>
           <ul>
-            <li>Вт-Чт: 12:00 - 23:00</li>
-            <li>Пт-Сб: 12:00 - 02:00</li>
-            <li>Вс: 11:00 - 21:00</li>
-            <li>Пн: Выходной</li>
+            <li>Пн–Пт: 9:00 – 20:00</li>
+            <li>Сб–Вс: 10:00 – 19:00</li>
           </ul>
         </div>
-        <div className="footer-bottom">
-          <span>2025 VINYL DINER</span>
-          <span>ВКУС КЛАССИКИ</span>
-          <span>IG / TW / TK</span>
+        <div className="footer-links">
+          <h4>Контакты</h4>
+          <ul>
+            <li>
+              <a href="tel:+78001234567" style={{ color: "inherit", textDecoration: "none" }}>
+                8-800-123-45-67
+              </a>
+            </li>
+            <li>
+              <a href="mailto:info@holodok.ru" style={{ color: "inherit", textDecoration: "none" }}>
+                info@holodok.ru
+              </a>
+            </li>
+          </ul>
         </div>
       </footer>
     </>
