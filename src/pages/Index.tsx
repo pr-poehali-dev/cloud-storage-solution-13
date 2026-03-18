@@ -301,6 +301,11 @@ export default function Index() {
                 +7 923 280-92-59
               </a>
             </li>
+            <li style={{ marginTop: "4px" }}>
+              <a href="https://vk.com/club236680400" target="_blank" rel="noopener noreferrer" style={{ color: "inherit", textDecoration: "none" }}>
+                ВКонтакте
+              </a>
+            </li>
           </ul>
         </div>
       </footer>
